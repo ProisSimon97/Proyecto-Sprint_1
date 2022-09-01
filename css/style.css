@@ -1,0 +1,496 @@
+body {
+  background-image: url(../img/23-6-2021-7ss_generated.jpg);
+}
+
+#home {
+  background-image: url(../img/fondo-home.jpg);
+  background-position: center;
+  background-size:cover;
+}
+
+details {
+  width: 250px;
+  margin: 0 auto ;
+  background: #d7d7a8;
+  margin-bottom: .5rem;
+  box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+summary {
+  padding: 1rem;
+  display: block;
+  background: #d7d7a8;
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+summary:before {
+  content: '';
+  border-width: .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+details > ul {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 55;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0a141d;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(233, 55, 55);
+}
+
+.actual {
+  background-color:rgb(218, 31, 31);
+}
+
+.linea_superior{
+  float: left;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+.superior_interno {
+  float: left;
+  margin-right: 100px;
+  
+}
+
+.linea_inferior{
+  float: left;
+  margin-top: 55px;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+.inferior_interno {
+  float: left;
+  margin-right: 100px; 
+}
+
+.contenedor-grupos {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 75px;
+  border: 3px solid ;
+  padding-top: 10px;
+}
+
+fieldset legend {
+  color: white;
+  background: black;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px 2px #333533;
+
+}
+
+/*Estadios*/
+
+.slide {
+  position: absolute;
+  left: 200px;
+  top: 150px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+  height: 500px;
+  width: 1500px;
+}
+.slide-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+.slide-open:checked + .slide-item {
+  position: static;
+  opacity: 100;
+}
+.slide-item {
+  background-color: #111;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+.slide-item img {
+  display: block;
+  height: 500px;
+  width: 750px;
+  margin-left: 200px;
+}
+.slide-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+.slide-control.prev {
+  left: 2%;
+}
+.slide-control.next {
+  right: 2%;
+}
+.slide-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3,
+#slide-4:checked ~ .control-4,
+#slide-5:checked ~ .control-5,
+#slide-6:checked ~ .control-6,
+#slide-7:checked ~ .control-7,
+#slide-8:checked ~ .control-8 {
+  display: block;
+}
+.slide-indicador {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+.slide-indicador li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slide-circulo {
+  color: #828282;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+.slide-circulo:hover {
+  color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+   li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+    li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+    li:nth-child(3) .slide-circulo,
+#slide-4:checked ~ .control-4 ~ .slide-indicador 
+   li:nth-child(4) .slide-circulo,
+#slide-5:checked ~ .control-5 ~ .slide-indicador 
+   li:nth-child(5) .slide-circulo,
+#slide-6:checked ~ .control-6 ~ .slide-indicador 
+   li:nth-child(6) .slide-circulo,
+#slide-7:checked ~ .control-7 ~ .slide-indicador 
+   li:nth-child(7) .slide-circulo,
+#slide-8:checked ~ .control-8 ~ .slide-indicador 
+   li:nth-child(8) .slide-circulo {
+  color: #428bca;
+}
+
+.estadio-detail {
+  position:absolute;
+  top: 15px;
+  left: 975px;  
+  text-align: left;
+  width: 600px;
+}
+
+.estadio-nombre {
+  margin-right: 50px;
+  font-size:50px;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.estadio-info {
+  font-size:25px;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.titulo {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+       -1px 0px 2px rgba(255, 255, 255, 0);
+       
+}
+
+/*Contador*/
+#cuenta {
+  position: absolute;
+  top: 650px;
+  left: 250px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+  padding-top: 25px;
+  padding-right: 200px;
+  background-color: #0a1a2a;
+  height: 200px;
+  border-radius: 35px;
+  border: rgb(248, 84, 84) solid;
+}
+
+.simply-section {
+	background: whitesmoke;
+	width: 180px;
+	height: 180px;
+	margin: 0 20px;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.simply-amount {
+	display: block;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.simply-word {
+	font-weight: 300;
+	font-size: 30px;
+}
+
+.titulo_contador {
+  width: auto;
+  padding-left: 10px;
+  padding-top: 60px;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+       -1px 0px 2px rgba(255, 255, 255, 0);
+       
+}
+
+/*Partidos*/
+
+.tabla-partidos1 {
+
+  width: 575px;
+  height: 75px;
+  background-color: whitesmoke;
+  border: #111 solid;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  font-size: large;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;  
+  margin-left: 170px;
+  margin-top: 26px;
+}
+
+.tabla-partidos2 {
+
+  width: 575px;
+  height: 75px;
+  background-color: whitesmoke;
+  border: #111 solid;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  font-size: large;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;  
+  margin-left: 240px;
+  margin-top: 26px;
+}
+
+.partidos-derecha {
+
+  margin-left: 235px;
+}
+
+/*Footer*/
+.pie-pagina{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-2{
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+@media screen and (max-width:800px){
+  .pie-pagina .grupo-1{
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap:30px;
+      padding: 35px 0px;
+  }
+}
+
+/*Portada*/
+
+.wrap {
+
+  width: 95%;
+  height: 550px;
+  position: relative;
+  top: -5px;
+  left: 45px;
+  background-image: url(../img/Qatar.webp);
+  background-position: center;
+  background-size: 85% 100%;
+  box-shadow: 0px -1px 24px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px -1px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -1px 24px 0px rgba(0,0,0,0.75);
+border: 1px solid whitesmoke;
+border-radius: 5px;
+}
+
+.wrap2 {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  width: 150px;  
+  text-align: center;
+  padding: 2rem 3rem;
+  border: 2px solid whitesmoke;
+  box-shadow: 0 0 25px black;
+  backdrop-filter: blur(10px);
+  font-size:15px;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrap2:hover {
+  background: rgba(0,103,123,0.7);
+  transition: all 400ms ease-out;
+  opacity: 0.90;
+
+}
+.wrap2 figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wrap3 {
+  position: absolute;
+  top: 275px;
+  left: 150px;
+  width: 150px;  
+  text-align: center;
+  padding: 2rem 3rem;
+  border: 2px solid whitesmoke;
+  box-shadow: 0 0 25px black;
+  backdrop-filter: blur(10px);
+  font-size:15px;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrap3:hover {
+  background: rgba(0,103,123,0.7);
+  transition: all 400ms ease-out;
+  opacity: 0.90;
+
+}
+.wrap3 figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wrap4 {
+  position: absolute;
+  top: 450px;
+  left: 150px;
+  width: 150px;  
+  text-align: center;
+  padding: 2rem 3rem;
+  border: 2px solid whitesmoke;
+  box-shadow: 0 0 25px black;
+  backdrop-filter: blur(10px);
+  font-size:15px;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrap4:hover {
+  background: rgba(0,103,123,0.7);
+  transition: all 400ms ease-out;
+  opacity: 0.90;
+
+}
+.wrap4 figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
